@@ -5,13 +5,13 @@ const radio3 = document.getElementById("radioimage3");
 
 function changeBgImg(e) {
     if(radio1.checked){
-        imgChange.style.backgroundImage = "url(../img/26.jpg)";
+        imgChange.style.backgroundImage = "url(./img/26.jpg)";
     }
     else if(radio2.checked){
-        imgChange.style.backgroundImage = "url(../img/5.jpg)";
+        imgChange.style.backgroundImage = "url(./img/5.jpg)";
     }
     else if (radio3.checked){
-        imgChange.style.backgroundImage = "url(../img/7.jpg)";
+        imgChange.style.backgroundImage = "url(./img/7.jpg)";
     }
 }
 

@@ -11,7 +11,7 @@ let mouseLeaveEvent = function(e){
 }
 let onClickEvent = function(e){
     let showImg = document.querySelector('.show-img');
-    showImg.src = `../img/${this.id}.jpg`;
+    showImg.src = `./img/${this.id}.jpg`;
     let showcase = document.querySelector('.showcase');
     showcase.style.visibility = 'visible';
 }
@@ -32,7 +32,7 @@ for(let i=1; i<=33; i++){
 
     let innerDiv = document.createElement('div');
     innerDiv.className = "image";
-    innerDiv.style.backgroundImage = `url('../img/${i}.jpg')`;
+    innerDiv.style.backgroundImage = `url('./img/${i}.jpg')`;
 
     let innerText = document.createElement('p');
     innerText.className = "image-text";
