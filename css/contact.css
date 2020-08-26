@@ -1,0 +1,315 @@
+/* Global */
+:root {
+    --white: #eeeeff;
+    --light-brown: #ffbb55;
+    --orange: #ff8833;
+    --brown: #cc8866;
+    --black: #666677;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NavBar */
+header {
+    background-color: var(--orange);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--black);
+    z-index: 10;
+}
+
+#mainnav {
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainnav .title a{
+    color: var(--white);
+    font-family: Myriad Pro, sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#mainnav .navbar {
+    display: flex;
+}
+
+#mainnav .navbar .nav-item {
+    list-style: none;
+    font-family: Myriad Pro, sans-serif;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+
+#mainnav .navbar .nav-item a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#mainnav .navbar .nav-item a:after, nav .title a:after, #sidenav .sidenav-item:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: var(--white);
+    transition: 300ms;
+}
+  
+#mainnav .navbar .nav-item a:hover:after, nav .title a:hover:after, #sidenav .sidenav-item:hover:after {
+    width: 100%;
+}
+
+#mainnav .burger-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+#mainnav .burger-icon:hover {
+    color: var(--black);
+}
+
+#sidenav {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 10;
+    background-color: var(--orange);
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30vh 0;
+}
+
+#sidenav .sidenav-item {
+    opacity: 0;
+    text-decoration: none;
+    font-family: Myriad Pro, sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    transition: 1s;
+}
+
+#sidenav .closebtn {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+#sidenav .closebtn:hover {
+    color: var(--black);
+}
+
+/* Body */
+article.body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: var(--light-brown);
+}
+
+/* Will be using 26, 5 and 7 */
+.body #change-img {
+    width: 60%;
+    height: 100%;
+    background-image: url(../img/26.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#change-img .img-radio-btns {
+    position: relative;
+    top: 90%;
+    display: flex;
+    justify-content: center;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#change-img .img-radio-btns input{
+    display: none;
+}
+
+#change-img .img-radio-btns input:checked + .styledradio::after{
+    transform: scale(1);
+}
+
+#change-img .img-radio-btns .styledradio{
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+#change-img .img-radio-btns .styledradio::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: white;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+
+.body .contact-form {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.body .contact-form form {
+    outline: none;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: #4a4545;
+    border-radius: 1rem;
+}
+
+.contact-form form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-family: Myriad Pro, sans-serif;
+    font-size: 0.8rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--white);
+    color: transparent;
+    animation-name: extend;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes extend{
+    0% {
+       width: 0; 
+       color: transparent;
+    }
+    90% {
+        color: transparent;
+    }
+    100% {
+        width: 100%;
+        color: white;
+    }
+}
+
+.contact-form form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    resize: none;
+    font-family: Myriad Pro, sans-serif;
+    font-size: 0.8rem;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.contact-form form input:focus {
+    border-bottom: 2px solid var(--light-brown);
+    transition-duration: 0.2s;
+}
+
+.contact-form form textarea:focus {
+    border: 2px solid var(--light-brown);
+    transition-duration: 0.2s;
+}
+
+.contact-form form button {
+    padding: 0.5rem;
+    font-family: Myriad Pro, sans-serif;
+    border-radius: 0.3rem;
+    width: 5rem;
+    margin: 0 auto;
+    background-color: white;
+    transition-duration: 0.2s;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.contact-form form button:hover {
+    background-color: var(--light-brown);
+    color: white;
+}
+
+/* Media Queries */
+@media(max-width: 700px){
+    #mainnav .navbar {
+        display: none;
+    }
+
+    #mainnav .burger-icon {
+        display: block;
+    }
+
+    #sidenav {
+        display: flex;
+    }
+}
+
+@media(max-width: 1000px){
+    article.body {
+        display: block;
+    }
+
+    .body #change-img {
+        width: 100%;
+        animation-delay: 0s;
+    }
+
+    #change-img .img-radio-btns {
+        animation-delay: 0s;
+    }
+
+    .body .contact-form {
+        width: 100%;
+        background-color: var(--light-brown);
+    }
+}
