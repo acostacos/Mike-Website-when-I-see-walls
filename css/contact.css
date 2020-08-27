@@ -15,12 +15,11 @@
 
 /* NavBar */
 header {
-    background-color: var(--orange);
+    background-color: #EFEFEF;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
-    border-bottom: 2px solid var(--black);
     z-index: 10;
 }
 
@@ -33,7 +32,7 @@ header {
 }
 
 #mainnav .title a{
-    color: var(--white);
+    color: black;
     font-family: Myriad Pro, sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
@@ -51,7 +50,7 @@ header {
 }
 
 #mainnav .navbar .nav-item a {
-    color: var(--white);
+    color: black;
     text-decoration: none;
 }
 
@@ -60,7 +59,7 @@ header {
     width: 0px;
     height: 2px;
     display: block;
-    background: var(--white);
+    background: black;
     transition: 300ms;
 }
   
@@ -71,7 +70,7 @@ header {
 #mainnav .burger-icon {
     display: none;
     font-size: 1.5rem;
-    color: var(--white);
+    color: black;
     cursor: pointer;
 }
 
@@ -85,7 +84,7 @@ header {
     position: fixed;
     transition: 0.5s;
     z-index: 10;
-    background-color: var(--orange);
+    background-color: #EFEFEF;
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -98,12 +97,12 @@ header {
     text-decoration: none;
     font-family: Myriad Pro, sans-serif;
     font-size: 1.5rem;
-    color: var(--white);
+    color: black;
     transition: 1s;
 }
 
 #sidenav .closebtn {
-    color: var(--white);
+    color: black;
     cursor: pointer;
     font-size: 2rem;
     position: absolute;
@@ -120,7 +119,7 @@ article.body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: var(--light-brown);
+    background-color: #EFEFEF;
 }
 
 /* Will be using 26, 5 and 7 */
@@ -162,7 +161,7 @@ article.body {
 #change-img .img-radio-btns .styledradio{
     width: 1.25rem;
     height: 1.25rem;
-    border: 2px solid white;
+    border: 2px solid #EFEFEF;
     border-radius: 50%;
     margin-right: 10px;
     box-sizing: border-box;
@@ -174,7 +173,7 @@ article.body {
     width: 100%;
     height: 100%;
     display: block;
-    background: white;
+    background: #EFEFEF;
     border-radius: 50%;
     transform: scale(0);
     transition: transform 0.5s;
@@ -194,7 +193,7 @@ article.body {
     display: flex;
     flex-direction: column;
     padding: 3rem;
-    background-color: #4a4545;
+    background-color: black;
     border-radius: 1rem;
 }
 
@@ -205,8 +204,8 @@ article.body {
     font-size: 0.8rem;
     background: transparent;
     border: none;
-    border-bottom: 2px solid var(--white);
-    color: transparent;
+    border-bottom: 2px solid #EFEFEF;
+    color: #EFEFEF;
     animation-name: extend;
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -241,16 +240,17 @@ article.body {
 }
 
 .contact-form form input:focus {
-    border-bottom: 2px solid var(--light-brown);
+    border-bottom: 2px solid var(--orange);
     transition-duration: 0.2s;
 }
 
 .contact-form form textarea:focus {
-    border: 2px solid var(--light-brown);
+    border: 2px solid var(--orange);
     transition-duration: 0.2s;
 }
 
 .contact-form form button {
+    border: 0;
     padding: 0.5rem;
     font-family: Myriad Pro, sans-serif;
     border-radius: 0.3rem;
@@ -275,7 +275,7 @@ article.body {
 }
 
 .contact-form form button:hover {
-    background-color: var(--light-brown);
+    background-color: var(--orange);
     color: white;
 }
 
@@ -310,6 +310,6 @@ article.body {
 
     .body .contact-form {
         width: 100%;
-        background-color: var(--light-brown);
+        background-color: #EFEFEF;
     }
 }
