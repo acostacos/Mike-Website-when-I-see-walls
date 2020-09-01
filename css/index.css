@@ -20,14 +20,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 main {
     color: var(--white);
     display: inline-block;
-    position: relative;
-    top: 35%;
-    left: 10%;
+    margin-left: 10%;
 }
 
 nav .navbar {
@@ -146,6 +146,14 @@ nav .navbar .nav-item a:hover:after {
 
 /* Media Queries */
 @media(max-width: 700px){
+    body {
+        justify-content: center;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
     .title-section .main-title {
         font-size: 2.5rem;
     }
